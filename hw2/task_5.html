@@ -1,0 +1,27 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+ function mathOperation(arg1, arg2, operation){
+ 	switch(operation){
+ 		case "+":
+	 		oper = arg1 + arg2;
+	 		return oper;
+	 	case "-":
+	 		oper = arg1 - arg2;
+	 		return oper;
+	 	case "*":
+	 		oper = arg1 * arg2;
+	 		return oper;
+	 	case "/":
+	 		oper = arg1 / arg2;
+	 		return oper;
+ 	}
+ }
+
+a = 15;
+b = 5;
+sighn = prompt("Введите знак математической операции")
+func = mathOperation(a, b, sighn)
+alert(func)
+
+</script> 
