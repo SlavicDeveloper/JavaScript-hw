@@ -1,0 +1,25 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+const products = [
+ 	{
+ 		id: 3,
+ 		price: 200,
+ 	},
+ 	{
+ 		id: 4,
+ 		price: 900,
+ 	},
+ 	{
+ 		id: 1,
+ 		price: 1000,
+ 	},
+ ];
+
+products.forEach(new_price => {
+	new_price.price = new_price.price - new_price.price*0.15
+})
+
+console.log(products);
+
+</script> 
