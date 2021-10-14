@@ -1,0 +1,22 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+function make25PercentDiscount(new_price){
+	return new_price - new_price * 0.25
+}
+
+class Product{
+	constructor(name, price){
+		this.name = name;
+		this.price = make25PercentDiscount(price);
+	}
+
+	show(){
+		alert(this.name + " " + this.price);
+	}
+}
+
+let obj = new Product("Редиска", 20);
+obj.show();
+
+</script>

@@ -1,0 +1,35 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+function Post(author, text, date){
+	this.author = author;
+	this.text = text;
+	this.date = date;
+	};
+
+Post.prototype.edit = function() {
+	this.text = ("Ваш текст: " + "''" + this.text + "''")
+	alert(this.author+ " " + this.text + " " + this.date);
+};
+
+function AttachedPost(author, text, date, highlighted){
+	this.author = author;
+	this.text = text;
+	this.date = date;
+	this.highlighted = false;
+	};
+
+AttachedPost.prototype = Object.create(Post.prototype);
+AttachedPost.prototype.constructor = AttachedPost;
+
+AttachedPost.prototype.makeTextHighlighted = function(){
+	this.highlighted = true;
+	alert(this.highlighted);
+};
+
+
+let obj = new AttachedPost("Вы", "Что-то", "24.06.12");
+obj.edit();
+obj.makeTextHighlighted();
+
+</script> 

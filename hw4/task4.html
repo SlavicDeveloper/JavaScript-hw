@@ -1,0 +1,33 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+class Post{
+	constructor(text, author, date){
+		this.text = text;
+		this.author = author;
+		this.date = date;
+	}
+	edit(){
+		this.text = ("Ваш текст: " + "''" + this.text + "''")
+		alert(this.author+ " " + this.text + " " + this.date);
+		}
+}
+
+class AttachedPost extends Post{
+	constructor(text, author, date, highlighted){
+		super(text);
+		this.author = author;
+		this.date = date;
+		this.highlighted = false;
+				}
+	makeTextHighlighted(){
+		this.highlighted = true;
+		alert(this.highlighted);
+		};
+}
+
+let at_obj = new AttachedPost("что-то", "Я", "08/10/21");
+at_obj.edit();
+at_obj.makeTextHighlighted();
+
+</script>
